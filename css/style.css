@@ -439,18 +439,13 @@ img {
   max-width: 100%;
   height: auto; }
 
-::-moz-selection {
-  background-color: yellow; }
-
-::selection {
-  background-color: yellow; }
-
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  line-height: 1.5;
   padding: 100px 30px;
   margin: 0 auto; }
   .container h1 {
@@ -471,8 +466,8 @@ img {
       position: absolute;
       background-color: #caced1;
       left: 0;
-      bottom: -5px;
-      height: 3px;
+      bottom: -4px;
+      height: 2px;
       width: 0;
       transition: width 0.3s; }
     .container a:hover::after {
