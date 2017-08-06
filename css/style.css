@@ -415,12 +415,13 @@ body {
   min-width: 320px;
   margin: 0;
   padding: 0;
-  font-family: Merriweather, serif;
+  font-family: sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
-  background-color: #0a1c27;
-  color: #fbfbfd; }
+  background-color: #fafafa;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ }
 
 .visually-hidden {
   position: absolute;
@@ -441,34 +442,127 @@ img {
 
 .container {
   min-height: 100vh;
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
   line-height: 1.5;
-  padding: 100px 30px;
+  padding: 0 30px;
   margin: 0 auto; }
-  .container h1 {
-    font-size: 24px;
-    font-size: 1.5rem; }
-  .container p {
-    font-size: 32px;
-    font-size: 2rem; }
-  .container .contacts {
-    font-size: 24px;
-    font-size: 1.5rem; }
-  .container a {
-    color: #caced1;
-    text-decoration: none;
+
+.site-title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0;
+  color: white; }
+
+.page-header {
+  padding: 20px;
+  background-color: #53008a;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center; }
+  .page-header .contacts__link {
+    display: inline-block;
+    margin-left: 10px;
+    color: #eee;
+    font-size: 0; }
+    .page-header .contacts__link span::after {
+      background-color: #eee; }
+    .page-header .contacts__link svg {
+      fill: #eee;
+      width: 20px;
+      height: 20px; }
+
+.page-footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 20px; }
+
+h1 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #53008a; }
+
+p {
+  font-size: 16px;
+  font-size: 1rem; }
+
+blockquote {
+  font-size: 18px;
+  font-size: 1.3rem;
+  font-style: italic; }
+
+.contacts {
+  font-size: 14px;
+  font-size: 0.8rem; }
+
+a {
+  color: #53008a;
+  text-decoration: none;
+  position: relative; }
+
+.contacts__link {
+  display: block;
+  line-height: 1.2;
+  margin: 5px 0; }
+  .contacts__link svg {
+    width: 14px;
+    height: 14px;
+    fill: #53008a; }
+  .contacts__link svg,
+  .contacts__link span {
+    display: inline-block;
+    vertical-align: middle; }
+  .contacts__link span {
     position: relative; }
-    .container a::after {
-      content: "";
-      position: absolute;
-      background-color: #caced1;
-      left: 0;
-      bottom: -4px;
-      height: 2px;
-      width: 0;
-      transition: width 0.3s; }
-    .container a:hover::after {
-      width: 100%; }
+  .contacts__link span::after {
+    content: "";
+    position: absolute;
+    background-color: #53008a;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0;
+    transition: width 0.3s; }
+  .contacts__link:hover span::after {
+    width: 100%; }
+
+.post__header,
+.post__body {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 30px; }
+
+.post__title {
+  color: #53008a; }
+
+.post__subtitle {
+  font-style: italic; }
+
+.img-wrapper {
+  margin: 20px 0; }
+  .img-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto; }
+  @media (min-width: 660px) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left; } }
+  @media (min-width: 900px) {
+  .site-title {
+    font-size: 1.5rem; }
+  .page-header .contacts__link {
+    display: block; }
+  .page-header .contacts__link span {
+    font-size: 14px;
+    margin-left: 5px; }
+  .page-header .contacts__link svg {
+    width: 14px;
+    height: 14px; }
+  .site-title {
+    font-size: 2rem; } }
